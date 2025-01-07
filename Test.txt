@@ -1,59 +1,43 @@
-test yeeeeas!
-Bogdan lox
-lox авыаваыафчсфыв- привет!
-Fdsss terst dfsssss.
-ва
-ы
-а
-ав
-ы
-а
-выа
-ыв
-а
-вы
-пр
-а
- ы
-р
-аып
- ыа
-п 
-ыа
-пы
-вп 
-фв
-п
-фвп 
-фв
-п
-фв а
-фыв
-а 
-фва
-фв
- афв
-а
-фв
-а фв
-а
-вфы
- аф
-в
- ыв
-а 
-фв
-ав 
+su 
+wchod w admin rerzym
+useradd user passwd user
+dodaje usera i dodaje parol usera
+userdel -rf user
 
-фва
-ф
-ва 
-фва
-фв
-афв
-а 
-фва
-фв
-аф
-а
-фвафва
+who
+w
+whoami
+users
+last
+finger             
+
+ls
+Pokazuje imena failow i kataloguw w tekuszczej direktorii
+ls -l
+Wywodit detalnuu informacyu o failach i katalogach
+ls -a
+Otobrarzaet wse faili wkluczaja skrytyje
+ls -h
+Otobrarzaet razmery failow (KB MB). Ispolzowat wmeste s -l
+ls -R
+Otobrarzaet soderrzymoje wsech podkataloguw
+ls -t
+Sortirujet faili po date
+ls -S
+Sortirujet faili po razmeru
+ls -d
+Otobrarzaet tolko direktorii
+
+cat /etc/passwd: informacja o polzowatelach
+cat /etc/group: informacja o grupach
+cat /etc/shadow: informacja o parolach
+
+useradd -m -d /home/lab1 student_lab1 
+sozdaet polzowatela z domowym katalogiem lab1
+
+groupadd lab1
+sudo usermod -aG lab1 student <-- Dodaje polsowatela do grupy
+groups student <-- pokazuje
+
+chgrp lab1 /home/student_lab1 
+izmenajet grupu domaszneho katalogu na lab1 
