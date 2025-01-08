@@ -3,6 +3,8 @@ wchod w admin rerzym
 useradd user passwd user
 dodaje usera i dodaje parol usera
 userdel -rf user
+pwd
+w jakim katalogy my
 
 who
 w
@@ -41,3 +43,20 @@ groups student <-- pokazuje
 
 chgrp lab1 /home/student_lab1 
 izmenajet grupu domaszneho katalogu na lab1 
+
+mkdir ~/dane 
+stworyty katalog w katalogu domowym
+chmod (g/o)+(r/w/x) "nazwa"
+ls -la ~ > lista.txt 
+sozdanie faila w tekuszczem katalogu
+setfacl -m g:lab1_g1:rwx ~/dane 
+dodawanie grupy do katalogu z modyfikatoramy dostupu
+getfacl 
+otobrarzenie wsech praw i ACL
+
+touch 
+sozdat file
+echo 
+komanda dla wypolnienia
+nano (filename)
+rzeby zaiti w redaktor
