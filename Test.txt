@@ -60,3 +60,93 @@ echo
 komanda dla wypolnienia
 nano (filename)
 rzeby zaiti w redaktor
+________________
+Windows cmd
+start notepad
+tasklist | findstr notepad
+tasklist | findstr notepad > processes.txt
+
+whoami /USER
+whoami /GROUPS
+whoami /USER /GROUPS
+wmic useraccount get name,sid
+
+cls
+cd c:\
+dir /A   
+pokazuje soderrzymoje katalogu
+where notepad.exe
+
+net user student_lab1 student /add
+Sozdat usera (imie parol)
+net localgroup Users student_lab1 /add
+Dobawlaet k grupe 
+net localgroup  <-- informacja
+net user student_lab1 /delete
+net localgroup <imie grupy> /add
+net localgroup Users
+
+mkdir c:\studenci\grupalab1
+sozdat papku
+icacls c:\studenci\grupalab1
+prosmotr tekuszczich praw
+icacls c:\studenci\grupalab1 /remove:g Users
+udalit grupu iz praw
+icacls c:\studenci\grupalab1 /deny student_lab1:F
+otkazat wo wsech prawach
+rmdir /s /q c:\studenci
+udalit papku
+attrib /d c:\*
+spisok atribotow failuw i papok w korne C
+cd c:\student
+echo. > atrybuty1.txt
+attrib +H atrybuty1.txt
+
+tasklist
+tasklist | sort
+tasklist | sort | find /i "chrome"
+tasklist | sort | find /i "notepad"
+tasklist | sort /+66
+taskkill /F /IM chrome.exe
+taskkill /F /IM edge.exe
+taskkill /F /IM firefox.exe
+tskill <PID>
+taskkill /PID <PID>
+tskill chr*
+start "" /REALTIME "C:\Program Files\Google\Chrome\Application\chrome.exe"
+wmic process where name="chrome.exe" CALL setpriority 32768
+wmic process where name="chrome.exe" CALL setpriority "above normal"
+Priorytet
+
+net start
+net stop spooler && net start spooler
+sc query "Spooler"
+sc stop "Spooler"
+sc start "Spooler"
+
+________________
+PowerShell
+New-LocalUser -Name "student_lab1" -Password (ConvertTo-SecureString "student" -AsPlainText -Force) -FullName "Student Lab 1" -Description "Laboratory Group User" -PasswordNeverExpires
+sozdanie
+Add-LocalGroupMember -Group "Users" -Member "student_lab1"
+dobawlenie w grupu
+Remove-LocalUser -Name "student_lab1"
+edalenie
+Remove-LocalGroup -Name "studenci"
+udalit grupu
+get-childitem c:\student\atrybuty1.txt -Attributes H | ForEach-Object {
+    $_.CreationTime = "2023-01-01 06:00"
+    $_.LastWriteTime = "2023-01-01 06:00"
+    $_.LastAccessTime = "2023-01-01 06:00"
+}
+izminenie dat faila
+start-process notepad
+get-process notepad
+stop-process -Name notepad
+kill -Name notepad
+get-service
+get-service s* | sort-object status
+get-service | where-object {$_.Status -eq 'Running'}
+get-service | Sort-Object -Property DisplayName
+stop-service spooler -Force
+start-service spooler – Verbose
